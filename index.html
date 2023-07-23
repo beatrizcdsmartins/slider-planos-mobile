@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- O COMERCIAL É O RESIDENCIAL  -->
+
+    <div class="slider">
+        <div class="mode-buttons">
+            <div class="btn-container">
+                <button onclick="showComercial()">RESIDENCIAL</button>
+                <button onclick="showResidencial()">EMPRESARIAL</button>
+            </div>
+
+        </div>
+
+        <!-- Slider for Comercial -->
+        <div class="slides comercial">
+
+            <div class="carousel-comercial">
+                <div class="slide first">
+                    <img src="./assets/mega1-residencial.png" class="img-comercial" alt="">
+                </div>
+
+                <div class="slide">
+                    <img src="./assets/mega2-residencial.png" class="img-comercial" alt="">
+                </div>
+
+                <div class="slide">
+                    <img src="./assets/mega3-residencial.png" class="img-comercial" alt="">
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Slider for Residencial -->
+        <div class="slides residencial" style="display: none;">
+
+            <div class="carousel-empresarial">
+                <div class="slide first">
+                    <img src="./assets/mega.png" class="img-empresarial" alt="">
+                </div>
+
+                <div class="slide">
+                    <img src="./assets/mega2.png" class="img-empresarial" alt="">
+                </div>
+
+                <div class="slide">
+                    <img src="./assets/mega3.png" class="img-empresarial" alt="">
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .slider {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+    
+
+
+        }
+
+        img {
+            border-radius: 20px;
+        }
+
+        .img-comercial {
+            width: 300px;
+            height: 464px;
+            padding: 0 5px;
+        }
+
+        .img-empresarial {
+            width: 300px;
+            height: 611px;
+            padding: 0 5px;
+
+        }
+
+        .carousel-comercial {
+            width: 300px;
+
+
+        }
+
+
+        .carousel-empresarial {
+            width: 300px;
+        }
+
+     
+
+        .btn-container {
+            display: flex;
+            width: 300px;
+            justify-content: space-between;
+
+            border-bottom: 2px solid red;
+        }
+
+        .btn-container button {
+            margin-bottom: 15px;
+            background: none;
+            border: none;
+            color:#979797;
+
+
+        }
+
+        .btn-container button.btn-active {
+            color:#C10000
+        }
+    </style>
+
+    <script>
+
+                // Function to set initial button states
+                function setInitialButtonState() {
+            const btnResidencial = document.querySelector(".btn-container button:first-child");
+            const btnEmpresarial = document.querySelector(".btn-container button:last-child");
+
+            btnResidencial.classList.add("btn-active");
+            btnEmpresarial.classList.remove("btn-active");
+        }
+
+        // Function to handle button click events
+        function showComercial() {
+            document.querySelector(".slides.comercial").style.display = "block";
+            document.querySelector(".slides.residencial").style.display = "none";
+
+            const btnResidencial = document.querySelector(".btn-container button:first-child");
+            const btnEmpresarial = document.querySelector(".btn-container button:last-child");
+
+            btnResidencial.classList.add("btn-active");
+            btnEmpresarial.classList.remove("btn-active");
+        }
+
+        // Function to handle button click events
+        function showResidencial() {
+            document.querySelector(".slides.residencial").style.display = "block";
+            document.querySelector(".slides.comercial").style.display = "none";
+
+            const btnResidencial = document.querySelector(".btn-container button:first-child");
+            const btnEmpresarial = document.querySelector(".btn-container button:last-child");
+
+            btnResidencial.classList.remove("btn-active");
+            btnEmpresarial.classList.add("btn-active");
+        }
+
+        // Add event listeners to the buttons
+        document.querySelector(".btn-container button:first-child").addEventListener("click", showComercial);
+        document.querySelector(".btn-container button:last-child").addEventListener("click", showResidencial);
+
+        // Set the initial button state when the page loads
+        window.addEventListener("load", setInitialButtonState);
+
+    </script>
+
+    <!-- Pinho -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
+    <!-- Pinho -->
+
+    <script src="./slider-slick.js"></script>
+</body>
+
+</html>
