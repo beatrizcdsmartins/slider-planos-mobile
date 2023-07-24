@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css">
@@ -18,10 +18,7 @@
 
     <!-- O COMERCIAL É O RESIDENCIAL  -->
 
-
-
     <div class="slider">
-
         <div class="mode-buttons">
             <div class="btn-container">
                 <button onclick="showComercial()">RESIDENCIAL</button>
@@ -30,39 +27,20 @@
 
         </div>
 
-
-
         <!-- Slider for Comercial -->
         <div class="slides comercial">
 
             <div class="carousel-comercial">
                 <div class="slide first">
-                    <img src="./assets/background1small.png" class="img-comercial" alt="">
+                    <img src="./assets/mega1-residencial.png" class="img-comercial" alt="">
                 </div>
 
                 <div class="slide">
-                    <img src="./assets/background2small.png" class="img-comercial" alt="">
+                    <img src="./assets/mega2-residencial.png" class="img-comercial" alt="">
                 </div>
 
-                <!-- <div class="slide slide-background3">
-                    <div class="background3resi">
-                        <h1>550 MEGA</h1>
-                        <div class="container-intern-card" id="parg-card">
-                            <p>Wi-fi Plus</p>
-                            <p>Fibra Óptica de<br>ponta a ponta</p>
-                            <p>Suporte 24h</p>
-                            <p>Sem franquia de<br>consumo mensal</p>
-                        </div>
-                        <div class="container-intern-card">
-                            <h1>R$ 101,90</h1>
-                            <button>ASSINE JÁ!</button>
-                        </div>
-                
-                    </div>
-                </div> -->
-
                 <div class="slide">
-                    <img src="./assets/background3small.png" class="img-comercial" alt="">
+                    <img src="./assets/mega3-residencial.png" class="img-comercial" alt="">
                 </div>
             </div>
 
@@ -74,15 +52,15 @@
 
             <div class="carousel-empresarial">
                 <div class="slide first">
-                    <img src="./assets/background1big.png" class="img-empresarial" alt="">
+                    <img src="./assets/mega.png" class="img-empresarial" alt="">
                 </div>
 
                 <div class="slide">
-                    <img src="./assets/background2big.png" class="img-empresarial" alt="">
+                    <img src="./assets/mega2.png" class="img-empresarial" alt="">
                 </div>
 
                 <div class="slide">
-                    <img src="./assets/background3big.png" class="img-empresarial" alt="">
+                    <img src="./assets/mega3.png" class="img-empresarial" alt="">
                 </div>
             </div>
 
@@ -99,7 +77,6 @@
             box-sizing: border-box;
             font-family: 'Roboto', sans-serif;
         }
-
 
         .slider {
             display: flex;
@@ -130,15 +107,14 @@
         }
 
         .carousel-comercial {
-            display: flex;
-
+            width: 300px;
 
 
         }
 
 
         .carousel-empresarial {
-            display: flex;
+            width: 300px;
         }
 
 
@@ -152,55 +128,23 @@
         }
 
         .btn-container button {
-            margin-bottom: 8px;
+            margin-bottom: 15px;
             background: none;
             border: none;
-            color: #979797;
+            color:#979797;
 
 
         }
 
         .btn-container button.btn-active {
-            color: #C10000
+            color:#C10000
         }
-
-        .background3resi {
-            background-image: url(./assets/mega3residencial-background.png);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            width: 300px;
-            height: 464px;
-            padding: 0 5px;
-            border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-
-        }
-
-        .container-intern-card{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #parg-card{
-            height: 200px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around !important;
-          
-        }
-
     </style>
 
     <script>
 
-        // Function to set initial button states
-        function setInitialButtonState() {
+                // Function to set initial button states
+                function setInitialButtonState() {
             const btnResidencial = document.querySelector(".btn-container button:first-child");
             const btnEmpresarial = document.querySelector(".btn-container button:last-child");
 
@@ -241,6 +185,13 @@
 
     </script>
 
+    <!-- Pinho -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
+    <!-- Pinho -->
+
+    <script src="./slider-slick.js"></script>
 </body>
 
 </html>
